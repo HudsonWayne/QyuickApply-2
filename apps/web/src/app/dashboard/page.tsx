@@ -1,89 +1,99 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 export default function DashboardPage() {
   return (
-    <div>
-      <div className="mb-8 rounded-3xl bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-500 p-8 text-white">
-        <h1 className="text-4xl font-bold">
-          Welcome back 👋
-        </h1>
+    <div className="space-y-8">
+      {/* HERO */}
+      <div className="rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-green-400 p-8 text-white shadow-lg">
+        <h1 className="text-4xl font-bold">Welcome back 👋</h1>
 
-        <p className="mt-2 text-lg text-blue-100">
+        <p className="mt-2 text-lg text-white/80">
           Let's find and apply to your next opportunity.
         </p>
       </div>
 
+      {/* STATS */}
       <div className="grid gap-6 md:grid-cols-4">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <h3 className="text-slate-400">
-            Jobs Found
-          </h3>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm text-muted-foreground">
+              Jobs Found
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold">284</p>
+          </CardContent>
+        </Card>
 
-          <p className="mt-3 text-4xl font-bold text-white">
-            284
-          </p>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm text-muted-foreground">
+              Applications
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold">96</p>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <h3 className="text-slate-400">
-            Applications
-          </h3>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm text-muted-foreground">
+              Interviews
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold">14</p>
+          </CardContent>
+        </Card>
 
-          <p className="mt-3 text-4xl font-bold text-white">
-            96
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <h3 className="text-slate-400">
-            Interviews
-          </h3>
-
-          <p className="mt-3 text-4xl font-bold text-white">
-            14
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <h3 className="text-slate-400">
-            Success Rate
-          </h3>
-
-          <p className="mt-3 text-4xl font-bold text-green-400">
-            23%
-          </p>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-sm text-muted-foreground">
+              Success Rate
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl font-bold text-emerald-500">
+              23%
+            </p>
+          </CardContent>
+        </Card>
       </div>
 
-      <div className="mt-8 grid gap-6 lg:grid-cols-3">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6 lg:col-span-2">
-          <h2 className="mb-4 text-xl font-bold text-white">
-            Recent Applications
-          </h2>
+      {/* CONTENT GRID */}
+      <div className="grid gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle>Recent Applications</CardTitle>
+          </CardHeader>
 
-          <div className="space-y-4">
-            <div className="rounded-xl bg-slate-800 p-4 text-slate-200">
+          <CardContent className="space-y-3">
+            <div className="rounded-lg border p-3">
               Senior Frontend Developer
             </div>
 
-            <div className="rounded-xl bg-slate-800 p-4 text-slate-200">
+            <div className="rounded-lg border p-3">
               Full Stack Engineer
             </div>
 
-            <div className="rounded-xl bg-slate-800 p-4 text-slate-200">
+            <div className="rounded-lg border p-3">
               React Developer
             </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <h2 className="mb-4 text-xl font-bold text-white">
-            AI Insights
-          </h2>
+        <Card>
+          <CardHeader>
+            <CardTitle>AI Insights</CardTitle>
+          </CardHeader>
 
-          <p className="text-slate-400">
-            Your profile currently matches 82% of remote
-            software engineering jobs.
-          </p>
-        </div>
+          <CardContent>
+            <p className="text-muted-foreground">
+              Your profile currently matches 82% of remote software engineering jobs.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
