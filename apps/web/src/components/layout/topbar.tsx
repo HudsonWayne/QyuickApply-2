@@ -6,12 +6,10 @@ import { Bell, User } from "lucide-react";
 export function Topbar() {
   return (
     <header className="flex h-16 items-center justify-between border-b px-6">
-      {/* Search */}
       <div className="w-full max-w-md">
         <Input placeholder="Search jobs, companies..." />
       </div>
 
-      {/* Right side */}
       <div className="flex items-center gap-4">
         <button className="rounded-full p-2 hover:bg-muted">
           <Bell className="h-5 w-5" />
